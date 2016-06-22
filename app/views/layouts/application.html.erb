@@ -21,6 +21,15 @@
       <a class="navbar-brand" href="/">AvaBlog</a>
     </div>
     <div class="collapse navbar-collapse">
+      <p class="navbar-text pull-right">
+        <% if user_signed_in? %>
+        ようこそ <strong><%= current_user.username %> さん</strong> |
+        <%= link_to 'プロフィール編集', edit_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% else %>
+        <%= link_to "新規登録", new_user_registration_path, :class => 'navbar-link'  %> |
+        <%= link_to "ログイン", new_user_session_path, :class => 'navbar-link'  %>
+        <% end %>
       <ul class="nav navbar-nav">
         <li class="active"><a href="/posts">Posts</a></li>
       </ul>
@@ -32,17 +41,6 @@
 <% end %>
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
-<% end %>
-
-
-<p class="navbar-text pull-right">
-<% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-  <%= link_to 'プロフィール', edit_user_registration_path, :class => 'navbar-link' %> |
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-<% else %>
-  <%= link_to "新規登録", new_user_registration_path, :class => 'navbar-link'  %> |
-  <%= link_to "ログイン", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 
 <div class="container">
