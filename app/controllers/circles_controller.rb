@@ -11,6 +11,7 @@ class CirclesController < ApplicationController
   # GET /circles/1.json
   def show
     #@posts = Post.all
+    @circle_id = :id
   end
 
   # GET /circles/new
