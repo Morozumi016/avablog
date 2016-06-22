@@ -13,3 +13,108 @@
  *= require_tree .
  *= require_self
  */
+body { padding-top: 60px; }
+footer { margin-top: 100px; }
+table, td, th { vertical-align: middle; border: none; }
+th { border-bottom: 1px solid #DDD; }
+
+.navbar-default {
+  background-color: #cc0000;
+  border-color: #ffa6a6;
+}
+.navbar-default .navbar-brand {
+  color: #ffffff;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #000000;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #000000;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #000000;
+  background-color: #ffa6a6;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #000000;
+  background-color: #ffa6a6;
+}
+.navbar-default .navbar-toggle {
+  border-color: #ffa6a6;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #ffa6a6;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #000000;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #000000;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #000000;
+    background-color: #ffa6a6;
+  }
+}
+
+/*
+.navbar-custom {
+    background-color: #cc0000;
+    color:#fff;
+    border-radius:0;
+    border-color: #337ab7;
+}
+
+
+.navbar {
+  min-height: 38px;
+  background-color: #cc0000;
+}
+
+
+
+.navbar a.brand {
+  font-size: 18px;
+}
+.navbar a.brand:hover {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+
+footer {
+  background-color: #ebebeb;
+  padding: 30px 0;
+}
+*/
