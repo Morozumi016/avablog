@@ -10,7 +10,7 @@ class CirclesController < ApplicationController
   # GET /circles/1
   # GET /circles/1.json
   def show
-    @posts = Post.all
+    #@posts = Post.all
   end
 
   # GET /circles/new
@@ -66,7 +66,7 @@ class CirclesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_circle
       @circle = Circle.find(params[:id])
-      @posts = @circles.posts.all
+      @posts = @circle.posts.all
       @post = @circle.posts.build
     end
 

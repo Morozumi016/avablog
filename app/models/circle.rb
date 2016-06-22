@@ -1,4 +1,4 @@
 class Circle < ActiveRecord::Base
-  has_many :user
-  has_many :post
+  has_many :users
+  has_many :posts
 end
