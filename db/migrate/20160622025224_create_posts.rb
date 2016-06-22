@@ -5,8 +5,8 @@ class CreatePosts < ActiveRecord::Migration
       t.text :body
       t.date :today
       t.string :image
-      t.integer :user_id
-      t.integer :circle_id
+      t.integer :users_id
+      t.integer :circles_id
 
       t.timestamps null: false
     end
