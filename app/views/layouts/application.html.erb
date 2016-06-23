@@ -21,12 +21,23 @@
       <a class="navbar-brand" href="/circles">AvaBlog</a>
     </div>
     <div class="collapse navbar-collapse">
-      <p class="navbar-text pull-right">
-      <% if user_signed_in? %>
-      ようこそ <strong><%= current_user.username %> さん</strong>
-      <% end %>
+      <ul class="navbar-text pull-right">
+        <% if user_signed_in? %>
+        ようこそ <strong><%= current_user.username %> さん</strong>
+        <% end %>
+       </ul>
       <ul class="nav navbar-nav">
-        <li><a href="/circles">サークル一覧</a></li>
+        <div class="btn-group">
+        <button type="button" class="btn btn-default navbar-btn">
+        <a href="/circles">サークル一覧</a>
+        </button>
+        <button type="button" class="btn btn-default navbar-btn">
+        <a href="/posts">記事一覧</a>
+        </button>
+        </div>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+
         <% if user_signed_in? %>
         <li><%= link_to 'プロフィール編集', edit_user_registration_path, :class => 'navbar-link' %></li>
         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
@@ -34,7 +45,7 @@
         <li><%= link_to "新規登録", new_user_registration_path, :class => 'navbar-link'  %></li>
         <li><%= link_to "ログイン", new_user_session_path, :class => 'navbar-link'  %></li>
         <% end %>
-      </ul>
+       </ul>
     </div>
   </div>
 </nav>
