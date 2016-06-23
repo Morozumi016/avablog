@@ -10,7 +10,7 @@
   <tbody>
     <% @circles.each do |circle| %>
       <tr>
-        <td><%= image_tag circle.picture_url, width: 100 if circle.picture.present?%><td>
+        <td><%= image_tag circle.picture_url, width: 100  if circle.picture.present?%></td>
         <td><%= link_to circle.name, circle %></td>
         <td><%= link_to 'Destroy', circle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
