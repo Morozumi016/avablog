@@ -15,7 +15,7 @@
 
   <div class="field">
   <%= f.label :circle_id %><br />
-  <%= f.number_field :circle_id, autofocus: true %>
+  <%= f.collection_select :circle_id,Circle.all, :id, :name%>
   </div>
 
   <div class="field">
