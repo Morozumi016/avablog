@@ -16,7 +16,7 @@
 <br>
 <p>
   <strong>Image:</strong>
-  <%= @post.image %>
+  <%= image_tag(@post.image_url, width: 400) if @post.image.present? %>
 </p>
 <br>
 <p>
