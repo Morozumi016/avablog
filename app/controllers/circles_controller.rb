@@ -27,7 +27,7 @@ class CirclesController < ApplicationController
   # POST /circles.json
   def create
     @circle = Circle.new(circle_params)
-    @user = current_user.name;
+
     respond_to do |format|
       if @circle.save
         format.html { redirect_to @circle, notice: 'Circle was successfully created.' }
