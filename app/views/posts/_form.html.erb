@@ -31,7 +31,9 @@
       <%= f.file_field :image %>
     </div>
 
+    <%= f.label :user_id %><br>
     <%= f.hidden_field :user_id %>
+    <%= current_user.username %>
 
     <div class="field">
       <%= f.label :circle_id %><br>
