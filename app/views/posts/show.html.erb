@@ -1,32 +1,33 @@
-<p>
-  <strong>Title:</strong>
+<h2>
+  <strong>Title: </strong>
   <%= @post.title %>
-</p>
-
+</h2>
+<br>
 <p>
-  <strong>Body:</strong>
+  <strong>Body: </strong>
+  <br>
   <%= @post.body %>
 </p>
-
+<br>
 <p>
-  <strong>Today:</strong>
+  <strong>Today: </strong>
   <%= @post.today %>
 </p>
-
+<br>
 <p>
   <strong>Image:</strong>
   <%= @post.image %>
 </p>
-
+<br>
 <p>
   <strong>User:</strong>
   <%= @post.user_id %>
 </p>
-
+<br>
 <p>
   <strong>Circle:</strong>
   <%= @post.circle_id %>
 </p>
-
+<br>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', circle_path(@post.circle_id) %>
