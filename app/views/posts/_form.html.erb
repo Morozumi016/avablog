@@ -30,10 +30,9 @@
       <%= f.label :image %><br>
       <%= f.file_field :image %>
     </div>
-    <div class="field">
-      <%= f.label :user_id %><br>
-      <%= f.number_field :user_id %>
-    </div>
+
+    <%= f.hidden_field :user_id %>
+
     <div class="field">
       <%= f.label :circle_id %><br>
       <%= f.collection_select :circle_id,Circle.all, :id, :name%>
