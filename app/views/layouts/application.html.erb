@@ -22,16 +22,18 @@
     </div>
     <div class="collapse navbar-collapse">
       <p class="navbar-text pull-right">
-        <% if user_signed_in? %>
-        ようこそ <strong><%= current_user.username %> さん</strong> |
-        <%= link_to 'プロフィール編集', edit_user_registration_path, :class => 'navbar-link' %> |
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-        <% else %>
-        <%= link_to "新規登録", new_user_registration_path, :class => 'navbar-link'  %> |
-        <%= link_to "ログイン", new_user_session_path, :class => 'navbar-link'  %>
-        <% end %>
+      <% if user_signed_in? %>
+      ようこそ <strong><%= current_user.username %> さん</strong>
+      <% end %>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/circles">サークル一覧</a></li>
+        <li><a href="/circles">サークル一覧</a></li>
+        <% if user_signed_in? %>
+        <li><%= link_to 'プロフィール編集', edit_user_registration_path, :class => 'navbar-link' %></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+        <% else %>
+        <li><%= link_to "新規登録", new_user_registration_path, :class => 'navbar-link'  %></li>
+        <li><%= link_to "ログイン", new_user_session_path, :class => 'navbar-link'  %></li>
+        <% end %>
       </ul>
     </div>
   </div>
@@ -46,5 +48,6 @@
 <div class="container">
   <%= yield %>
 </div>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </body>
 </html>
