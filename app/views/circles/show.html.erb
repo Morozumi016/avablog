@@ -10,8 +10,8 @@
     <tr>
       <th></th>
       <th></th>
-      <th>date</th>
-      <th>Title</th>
+      <th>日付</th>
+      <th>タイトル</th>
       <th colspan="10"></th>
     </tr>
   </thead>
@@ -22,8 +22,8 @@
         <td><%= image_tag post.image_url, width: 100 if post.image.present?%><td>
         <td><%= post.today %></td>
         <td><%= link_to post.title, post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '編集', edit_post_path(post) %></td>
+        <td><%= link_to '削除', post, method: :delete, data: { confirm: '記事を削除します。よろしいですか?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,5 +32,5 @@
 <br>
 
 
-<%= link_to 'CircleEdit', edit_circle_path(@circle) %> |
-<%= link_to 'Back', circles_path %>
+<%= link_to 'サークル情報編集', edit_circle_path(@circle) %> |
+<%= link_to '戻る', circles_path %>

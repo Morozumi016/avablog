@@ -1,15 +1,15 @@
 <h2>
-  <strong>Title: </strong>
+  <strong>タイトル: </strong>
   <%= @post.title %>
 </h2>
 <br>
 
 <p>
-  <strong>date: </strong>
+  <strong>日付: </strong>
   <%= @post.today %>
 </p>
 <p>
-  <strong>User:</strong>
+  <strong>投稿者:</strong>
   <%= @post.user_id %>
 </p>
 <br>
@@ -30,5 +30,6 @@
   <%= @post.circle_id %>
 </p>
 <br>
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', circle_path(@post.circle_id) %>
+<%= link_to '編集', edit_post_path(@post) %> |
+<%= link_to '戻る', circle_path(@post.circle_id) %>
+<br>
