@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :posts
   belongs_to :circle
+   attr_accessor :login
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -21,12 +22,4 @@ class User < ActiveRecord::Base
     end
   end
 
-  #emailを不要とする
-  def email_required?
-    false
-  end
-
-  def email_changed?
-    false
-  end
 end
