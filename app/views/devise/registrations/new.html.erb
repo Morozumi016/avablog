@@ -1,44 +1,42 @@
-<h2>新規作成</h2>
+<h2>新規ユーザー作成</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
-  <%= f.label :username %><br />
+  <strong>ユーザー名</strong><br />
   <%= f.text_field :username, autofocus: true %>
   </div>
 
   <div class="field">
-  <%= f.label :user_id %><br />
+  <strong>ユーザーID</strong><br />
   <%= f.text_field :user_id, autofocus: true %>
   </div>
 
   <div class="field">
-  <%= f.label :circle_id %><br />
-  <%= f.collection_select :circle_id,Circle.all, :id, :name%>
+  <strong>サークル名</strong><br />
+    <%= f.collection_select :circle_id,Circle.all, :id, :name%>
   </div>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <strong>メールアドレス</strong><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <strong>パスワード</strong>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>(半角英数 <%= @minimum_password_length %> 文字以上)</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <strong>パスワード(確認用)</strong><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "登録" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
