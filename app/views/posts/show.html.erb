@@ -3,27 +3,28 @@
   <%= @post.title %>
 </h2>
 <br>
+
 <p>
-  <strong>Body: </strong>
-  <br>
-  <%= @post.body %>
-</p>
-<br>
-<p>
-  <strong>Today: </strong>
+  <strong>date: </strong>
   <%= @post.today %>
 </p>
-<br>
-<p>
-  <strong>Image:</strong>
-  <%= image_tag(@post.image_url, width: 400) if @post.image.present? %>
-</p>
-<br>
 <p>
   <strong>User:</strong>
   <%= @post.user_id %>
 </p>
 <br>
+
+<p>
+  <%= image_tag(@post.image_url, width: 400) if @post.image.present? %>
+</p>
+<br>
+
+<p>
+  <br>
+  <%= @post.body %>
+</p>
+<br>
+
 <p>
   <strong>Circle:</strong>
   <%= @post.circle_id %>
