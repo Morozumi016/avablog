@@ -13,30 +13,30 @@
 <!--新規作成の場合-->
   <%- if @post.new_record? -%>
     <div class="field">
-      <%= f.label :title %><br>
+     <strong>タイトル</strong><br>
       <%= f.text_field :title %>
     </div>
     <div class="field">
-      <%= f.label :body %><br>
+      <strong>本文</strong><br>
       <%= f.text_area :body %>
     </div>
 
     <div class="field">
-      <%= f.label :today %><br>
+      <strong>日付</strong><br>
       <%= f.date_select :today %>
     </div>
 
     <div class="field">
-      <%= f.label :image %><br>
+      <strong>写真</strong><br>
       <%= f.file_field :image %>
     </div>
 
-    <%= f.label :user_id %><br>
+    <strong>ユーザ</strong><br>
     <%= f.hidden_field :user_id %>
     <%= current_user.username %>
 
     <div class="field">
-      <%= f.label :circle_id %><br>
+      <strong>サークル</sstrong><br>
       <%= f.collection_select :circle_id,Circle.all, :id, :name%>
     </div>
     <div class="actions">
@@ -46,18 +46,18 @@
 <!--編集の場合-->
   <%- if @post.persisted? -%>
     <div class="field">
-      <%= f.label :title %><br>
+      <strong>タイトル</strong><br>
       <%= f.text_field :title %>
     </div>
     <div class="field">
-      <%= f.label :body %><br>
+      <strong>本文</strong><br>
       <%= f.text_area :body %>
     </div>
 
 
 
     <div class="field">
-      <%= f.label :image %><br>
+      <strong>画像</strong><br>
       <%= f.file_field :image %>
     </div>
 
